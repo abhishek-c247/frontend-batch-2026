@@ -1,4 +1,4 @@
-import { IoCheckmarkCircleSharp, IoChevronBackOutline } from "react-icons/io5";
+import { IoCheckmarkCircleSharp } from "react-icons/io5";
 import styles from "./layout.module.scss";
 import { auditData } from "@/public/auditData";
 import Scoring from "../Scoring";
@@ -25,17 +25,16 @@ const Layout = () => {
             {LAYOUT_CONSTANT.STATUS}
           </p>
         </div>
-
         <div className={styles.cards}>
           <div className={styles.card}>
             <div className={styles.cardTitle}>{LAYOUT_CONSTANT.OVERVIEW}</div>
             <OverView apiData={auditData} />
           </div>
-          <div className={styles.cards}>
+          <div className={styles.card}>
             <div className={styles.cardTitle}>{LAYOUT_CONSTANT.SCORING}</div>
             <Scoring apiData={auditData} />
           </div>
-          <div className={styles.cards}>
+          <div className={styles.card}>
             <div className={styles.cardTitle}>{LAYOUT_CONSTANT.ADJUSTED}</div>
             <Adjusted apiData={auditData} />
             <div className={styles.totals}>
