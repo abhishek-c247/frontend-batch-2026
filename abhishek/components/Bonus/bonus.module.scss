@@ -1,0 +1,98 @@
+@use "@/styles/_variables" as *;
+@use "@/styles/_mixins" as *;
+
+.wrapper {
+  width: 100%;
+  font-size: $font-small;
+  @include scroll-container(x);
+}
+
+.rowWrap {
+  display: flex;
+  gap: $gap-medium;
+  align-items: stretch;
+}
+
+.table,
+.tableSmall,
+.tableSide {
+  @include table-common;
+}
+
+.tableSmall {
+  min-width: 260px;
+}
+
+.table {
+  min-width: $min-width-main-table;
+}
+
+.tableSide {
+  min-width: $min-width-side-table;
+}
+
+.table th,
+.tableSmall th,
+.tableSide th {
+  @include header-style;
+  background: $header-light;
+}
+
+.subHeader th {
+  color: $red-accent;
+}
+
+.table td,
+.tableSmall td,
+.tableSide td {
+  @include table-cell;
+  border-color: $table-border;
+}
+
+.question {
+  text-transform: capitalize;
+}
+
+.table tr,
+.tableSmall tr,
+.tableSide tr {
+  @include row-height($row-height);
+}
+
+.categoryBonusCell {
+  text-align: center;
+  font-weight: 500;
+  background-color: $primary-dark !important;
+  color: white;
+  vertical-align: middle;
+  padding: 6px 8px;
+  font-size: $font-small;
+}
+
+.summary {
+  @include summary-cell;
+}
+
+.finalBox {
+  min-width: $min-width-category;
+  border: 1px solid $table-border;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.footer {
+  margin-top: $gap-small;
+  padding: 8px;
+  background: #f3f4f6;
+  border-radius: 6px;
+  text-align: right;
+  font-weight: 600;
+}
+
+.footer span {
+  font-size: 14px;
+  margin-left: 6px;
+}
