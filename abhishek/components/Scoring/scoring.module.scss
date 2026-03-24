@@ -1,0 +1,87 @@
+@use "@/styles/_variables" as *;
+@use "@/styles/_mixins" as *;
+
+.wrapper {
+  width: 100%;
+  font-size: $font-small;
+  color: $text-dark;
+}
+
+.scrollContainer {
+  @include scroll-container(x);
+}
+
+.rowWrap {
+  display: flex;
+  gap: $gap-small;
+  align-items: stretch;
+  min-width: 760px;
+}
+
+.table,
+.sideTable {
+  @include table-common;
+  font-size: $font-small;
+  overflow: visible;
+}
+
+.table {
+  flex: 1;
+}
+
+.sideTable {
+  width: $min-width-side-table;
+  min-width: $min-width-side-table;
+}
+
+.table thead,
+.sideTable thead {
+  @include row-height($header-height);
+}
+
+.table thead th,
+.sideTable thead th {
+  @include header-style;
+  background: white;
+  vertical-align: top;
+}
+
+.subHeaderRow th {
+  color: $red-accent;
+  font-size: $font-small;
+  padding-top: $gap-small / 5;
+}
+
+.table tbody td,
+.sideTable tbody td {
+  @include table-cell;
+  border-color: $table-border;
+  background: $header-light;
+  padding: 6px 8px;
+  line-height: 1.2;
+}
+
+.table tbody tr,
+.sideTable tbody tr {
+  @include row-height($row-height);
+}
+
+.summary {
+  @include summary-cell;
+}
+
+.sectionSpacer td {
+  height: $gap-small;
+  padding: 0;
+  border: none !important;
+  background: transparent !important;
+}
+
+.sideTable thead th {
+  vertical-align: top;
+  padding-top: 6px;
+}
+
+.sideTable thead tr {
+  height: 28px;
+}

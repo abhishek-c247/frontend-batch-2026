@@ -1,0 +1,77 @@
+@use "@/styles/_variables" as *;
+@use "@/styles/_mixins" as *;
+
+.wrapper {
+  width: 100%;
+  font-size: $font-small;
+  color: $text-dark;
+}
+
+.table {
+  margin-bottom: 0;
+  @include table-common;
+  overflow: hidden;
+
+  thead {
+    th {
+      @include header-style;
+      font-size: $font-small;
+      color: $text-dark;
+      vertical-align: top;
+    }
+
+    tr:first-child {
+      @include row-height($header-height);
+    }
+  }
+
+  tbody {
+    tr {
+      @include row-height($row-height);
+    }
+
+    td {
+      @include table-cell;
+      font-size: $font-small;
+      border-color: $border-light;
+      line-height: 1;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+  }
+}
+
+.categoryCell {
+  background-color: $primary-dark !important;
+  color: $header-light !important;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+  vertical-align: middle;
+  min-width: $min-width-category;
+}
+
+.sectionName {
+  text-transform: capitalize;
+  color: $text-medium;
+}
+
+.questions {
+  text-align: center;
+  font-weight: 500;
+}
+
+.categorySpacer td {
+  height: $gap-small;
+  padding: 0;
+  border: none;
+  background: transparent;
+  line-height: 0;
+}
+
+.subHeaderRow {
+  border: none;
+  background: transparent;
+}

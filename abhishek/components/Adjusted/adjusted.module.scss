@@ -1,0 +1,72 @@
+@use "@/styles/_variables" as *;
+@use "@/styles/_mixins" as *;
+
+.wrapper {
+  width: 100%;
+  font-size: $font-small;
+  color: $text-dark;
+}
+
+.scrollContainer {
+  @include scroll-container(x);
+}
+
+.rowWrap {
+  display: flex;
+  gap: $gap-small;
+  align-items: stretch;
+  min-width: 500px;
+}
+
+.table,
+.sideTable {
+  @include table-common;
+  overflow: visible;
+}
+
+.table {
+  flex: 1;
+}
+
+.sideTable {
+  width: $min-width-side-table;
+  min-width: $min-width-side-table;
+}
+
+.table thead th,
+.sideTable thead th {
+  @include header-style;
+  background: $header-light;
+}
+
+.subHeader th {
+  color: $red-accent;
+  font-size: $font-small;
+}
+
+.table thead,
+.sideTable thead {
+  @include row-height($header-height);
+}
+
+.table tbody td,
+.sideTable tbody td {
+  @include table-cell;
+  border-color: $table-border;
+}
+
+.table tbody tr,
+.sideTable tbody tr {
+  @include row-height($row-height);
+}
+
+.sectionCell {
+  @include summary-cell;
+}
+
+.sectionSpacer td {
+  height: $gap-small;
+  padding: 0;
+  border: none !important;
+  background: transparent !important;
+}
