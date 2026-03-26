@@ -7,9 +7,6 @@
   color: $text-dark;
 }
 
-.scrollContainer {
-  @include scroll-container(x);
-}
 
 .rowWrap {
   display: flex;

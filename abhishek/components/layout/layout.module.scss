@@ -5,10 +5,13 @@
   background: $summary-light;
   min-height: 100vh;
   color: $primary-dark;
+  overflow-x: hidden;  
+  width: 100%;
 }
-
 .content {
   padding: 18px 24px 32px;
+  max-width: 100%;     
+  overflow-x: hidden;
 }
 
 .subNav {
@@ -30,39 +33,48 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: $gap-small;
+  max-width: 100%;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
 .pageTitle {
   font-size: 14px;
   font-weight: 600;
+  min-width: 0;
+  margin: 10px;
 }
 
 .status {
   display: flex;
   align-items: center;
   gap: 6px;
+  min-width: 0;
+  margin: 10px;
 }
 
 .status svg {
   font-size: 18px;
   color: $avatar-green;
 }
+.scrollArea {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.scrollContent {
+  min-width: max-content; 
+}
 
 
 .cards {
   display: flex;
   gap: $gap-medium;
-  overflow-x: auto;        
-  scroll-behavior: smooth;
-
-  padding-bottom: 10px;
-
-  scrollbar-width: thin;
 }
 
 .card {
-  min-width: 380px;        
-  flex-shrink: 0;        
+  min-width: $min-width-card;
+  flex-shrink: 0;
   background: white;
   padding: $gap-medium;
   border-radius: 8px;
@@ -100,4 +112,5 @@
   border: 1px solid $border-light;
   border-radius: 8px;
   padding: $gap-medium;
+  width: 100%;
 }

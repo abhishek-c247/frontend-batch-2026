@@ -4,13 +4,20 @@
 .wrapper {
   width: 100%;
   font-size: $font-small;
-  @include scroll-container(x);
 }
 
 .rowWrap {
   display: flex;
   gap: $gap-medium;
   align-items: stretch;
+}
+
+.scoringGroup {
+  display: flex;
+  gap: $gap-small;
+  align-items: stretch;
+  width: $min-width-scoring-row;
+  min-width: $min-width-scoring-row;
 }
 
 .table,
@@ -20,14 +27,16 @@
 }
 
 .tableSmall {
-  min-width: 260px;
+  width: $min-width-card;
+  min-width: $min-width-card;
 }
 
 .table {
-  min-width: $min-width-main-table;
+  flex: 1;
 }
 
 .tableSide {
+  width: $min-width-side-table;
   min-width: $min-width-side-table;
 }
 
@@ -36,6 +45,7 @@
 .tableSide th {
   @include header-style;
   background: $header-light;
+ 
 }
 
 .subHeader th {
@@ -63,7 +73,7 @@
   text-align: center;
   font-weight: 500;
   background-color: $primary-dark !important;
-  color: white;
+  color: $white !important;
   vertical-align: middle;
   padding: 6px 8px;
   font-size: $font-small;
@@ -81,12 +91,14 @@
   align-items: center;
   justify-content: center;
   font-weight: 600;
+  margin-left: auto;
+  flex: 0 0 auto;
 }
 
 .footer {
   margin-top: $gap-small;
   padding: 8px;
-  background: #f3f4f6;
+  background: $color-gray-100;
   border-radius: 6px;
   text-align: right;
   font-weight: 600;

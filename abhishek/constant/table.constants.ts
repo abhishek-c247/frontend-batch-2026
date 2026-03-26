@@ -1,6 +1,3 @@
-
-
-
 export const OVERVIEW_CONSTANT = {
   CATEGORY: "Category",
   SECTION: "Section",
@@ -14,6 +11,10 @@ export const SCORING_CONSTANT= {
   WEIGHT: "Weight",
   TOTAL_SCORE: "Total Score",
   QUESTIONS: "Questions",
+  VARIANT: {
+    MAIN: "main",
+    SIDE:"side"
+  }
 };
 
 export const LAYOUT_CONSTANT = {
@@ -53,5 +54,8 @@ export const ADJUSTED_CONSTANT = {
   TYPE: "Type",
   SECTION: "Section",
   SCORE: "Score",
-  
-}
+  VARIANT: {
+    WEIGHT: "weight",
+    SCORE:"score"
+  },
+};

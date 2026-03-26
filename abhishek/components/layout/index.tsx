@@ -17,7 +17,6 @@ const Layout = () => {
             {LAYOUT_CONSTANT.SUB_HEADING}
           </div>
         </div>
-
         <div className={styles.pageHeader}>
           <p className={styles.pageTitle}>{LAYOUT_CONSTANT.SUB_HEADING}</p>
           <p className={styles.status}>
@@ -25,36 +24,50 @@ const Layout = () => {
             {LAYOUT_CONSTANT.STATUS}
           </p>
         </div>
-        <div className={styles.cards}>
-          <div className={styles.card}>
-            <div className={styles.cardTitle}>{LAYOUT_CONSTANT.OVERVIEW}</div>
-            <OverView apiData={auditData} />
-          </div>
-          <div className={styles.card}>
-            <div className={styles.cardTitle}>{LAYOUT_CONSTANT.SCORING}</div>
-            <Scoring apiData={auditData} />
-          </div>
-          <div className={styles.card}>
-            <div className={styles.cardTitle}>{LAYOUT_CONSTANT.ADJUSTED}</div>
-            <Adjusted apiData={auditData} />
-            <div className={styles.totals}>
-              <div className={styles.totalsHeader}>
-                {LAYOUT_CONSTANT.TOTALS}
+        <div className={styles.scrollArea}>
+          <div className={styles.scrollContent}>
+            <div className={styles.cards}>
+              <div className={styles.card}>
+                <div className={styles.cardTitle}>
+                  {LAYOUT_CONSTANT.OVERVIEW}
+                  <hr />
+                </div>
+                <OverView apiData={auditData} />
               </div>
-              <div className={styles.totalsRow}>
-                <span>{auditData.sections_total.all_score_total}</span>
-                <span>
-                  {auditData.sections_total.adjustment_weight_section_total}%
-                </span>
-                <span>
-                  {auditData.sections_total.adjustment_score_section_total}
-                </span>
+              <div className={styles.card}>
+                <div className={styles.cardTitle}>
+                  {LAYOUT_CONSTANT.SCORING}
+                  <hr />
+                </div>
+                <Scoring apiData={auditData} />
+              </div>
+              <div className={styles.card}>
+                <div className={styles.cardTitle}>
+                  {LAYOUT_CONSTANT.ADJUSTED}
+                  <hr />
+                </div>
+                <Adjusted apiData={auditData} />
+                <div className={styles.totals}>
+                  <div className={styles.totalsHeader}>
+                    {LAYOUT_CONSTANT.TOTALS}
+                  </div>
+                  <div className={styles.totalsRow}>
+                    <span>{auditData.sections_total.all_score_total}</span>
+                    <span>
+                      {auditData.sections_total.adjustment_weight_section_total}
+                      %
+                    </span>
+                    <span>
+                      {auditData.sections_total.adjustment_score_section_total}
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
+            <div className={styles.bonusCard}>
+              <Bonus />
+            </div>
           </div>
-        </div>
-        <div className={styles.bonusCard}>
-          <Bonus />
         </div>
       </div>
     </div>

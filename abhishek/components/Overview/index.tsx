@@ -46,7 +46,7 @@ const OverView = ({ apiData }: OverviewProps) => {
                   key={`spacer-${sectionIndex}`}
                   className={styles.categorySpacer}
                 >
-                  <td colSpan={2} />
+                  <td colSpan={3} />
                 </tr>
               </>
             );

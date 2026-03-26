@@ -1,3 +1,7 @@
+import { ReactNode } from "react";
+
+type AdjustedTableVariant = "weight" | "score";
+type ScoringTableVariant = "main" | "side";
 
 export interface SectionTypeItem {
   question_type?: string;
@@ -51,3 +55,20 @@ export interface ScoringProps {
 export interface BonusProps {
   data?: BonusSection;
 }
+
+export interface AdjustedTableProps {
+  sections: Section[];
+  variant: AdjustedTableVariant;
+  className?: string;
+}
+export interface ScoringTableProps {
+  sections: Section[];
+  variant: ScoringTableVariant;
+  className?: string;
+}
+
+export interface BonusTableProps<T> {
+  className?: string;
+  rows: T[];
+  renderRow: (row: T, index: number) => ReactNode;
+};

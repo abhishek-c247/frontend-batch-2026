@@ -1,13 +1,35 @@
 $primary-dark: #0f2f4f;
+$primary-black:#000000;
 $summary-light: #f1f5f9;
 $header-light: #f8fafc;
+$white: #ffffff;
 $border-light: #e5e7eb;
 $table-border: #d1d5db;
 $red-accent: #d6423a;
 $text-dark: #1f2937;
 $text-medium: #374151;
+$text-strong: #111827;
+$text-muted: #6b7280;
 $avatar-green:#22c55e;
 
+$color-white: #ffffff;
+$color-gray-50: #f9fafb;
+$color-gray-100: #f3f4f6;
+$color-gray-200: #e5e7eb;
+$color-gray-300: #d1d5db;
+$color-gray-500: #6b7280;
+$color-gray-900: #111827;
+
+$space-4: 16px;
+$space-6: 24px;
+$space-2: 8px;
+$space-1: 4px;
+
+$text-xs: 12px;
+$text-sm: 14px;
+$text-lg: 20px;
+
+$radius-sm: 6px;
 
 $font-small: 10px;
 $row-height: 34px;
@@ -15,6 +37,8 @@ $header-height: 48px;
 $gap-small: 10px;
 $gap-medium: 12px;
 
+$min-width-card: 380px;
+$min-width-scoring-row: 760px;
 $min-width-small-table: 160px;
 $min-width-main-table: 420px;
 $min-width-side-table: 140px;

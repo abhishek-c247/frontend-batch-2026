@@ -6,16 +6,11 @@
   font-size: $font-small;
   color: $text-dark;
 }
-
-.scrollContainer {
-  @include scroll-container(x);
-}
-
 .rowWrap {
   display: flex;
   gap: $gap-small;
   align-items: stretch;
-  min-width: 760px;
+  min-width: $min-width-scoring-row;
 }
 
 .table,
